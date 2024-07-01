@@ -1,113 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivan Gaevskiy. Resume.</title>
-
-    <!-- Стили:
-    =================================================================================   -->
-    <link rel="stylesheet" href="styles.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ivan Gaevskiy. Resume.</title>
+  <!-- Стили:
+  ========================================================================= -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="profile_photo.jpg" type="image/x-icon">
 </head>
-<body style="font-family: Arial, sans-serif; background-color: rgb(225, 246, 255);">
-    <div class="a4-container">
-        <!-- Шапка, с таблицей и кнопками:
-        ================================================================================   -->
-        <div class="container">
 
-            <h1 class="left-column mb-0 center" style="margin-top: 0;">Иван Гаевский</h1>
-            <img class="photo" src="profile_photo.jpg">
-            <h2 class="left-column mt-0 mb-5 center">Ruby on Rails разработчик</h2>
-
-            <p class="mt-0 mb-0 center">Batumi, Georgia. ivangaevskiy@mail.ru</p>
-            <!--<p class="mt-0 mb-5">ivangaevskiy@mail.ru</p>-->
-            <div style= "display: grid; place-items: center;">
-                <table class="mt-5 mb-0 table-font-size">
-                                <tbody>
-                                    <tr>
-                                        <td>— Ruby</td>
-                                        <td>— Git</td>
-                                        <td>— GitLab</td>
-                                    </tr>
-                                    <tr>
-                                        <td>— Docker</td>
-                                        <td>— SQL</td>
-                                        <td>— Kafka</td>
-                                    </tr>
-                                    <tr>
-                                        <td>— Ruby On Rails</td>
-                                        <td>— OOP, SOLID</td>
-                                        <td>— Bootstrap</td>
-                                    </tr>
-                                    <tr>
-                                        <td>— Sidekiq</td>
-                                        <td>— GitHub</td>
-                                        <td>— Karafka</td>
-                                    </tr>
-                                    <tr>
-                                        <td>— Linux</td>
-                                        <td>— PostgleSQL</td>
-                                        <td>— GraphOL</td>
-                                    </tr>
-                                    <tr>
-                                        <td>— Redis</td>
-                                        <td>— REST-API</td>
-                                        <td>— RabbitMQ</td>
-                                    </tr>
-                                </tbody>
-                </table>
-            </div>
-
-            <p class="mt-5 mb-0 center inversion-column">
-
-                    <button class="button" onclick="window.open('https://t.me/Ivan_Ruby_Developer', '_blank')"><strong>Telegram</strong></button> 
-                    <button class="button" onclick="window.open('https://github.com/IvanGaevskiy/inline_scrolling_without_JavaScript_DEMO', '_blank')"><strong>GitHub</strong></button> 
-                    <button class="button" onclick="window.open('pdf_rus.pdf')"><strong>Скачать PDF</strong></button>
-
-            </p>
-        </div>
-        
-        <!-- Описание опыта работы, пройденные курсы, хобби:
-        ================================================================================   -->
-        <div class="mt-5">
-            <h2 class="mt-0 mb-5">Rails Real Estate Development</h2>
-            <h3 class="mt-5 mb-5">Ноябрь 2022 — Июнь 2024. 1 год 10 месяцев.</h3>
-            <h4 class="mb-5">Backend-разработка сайта по продаже недвижимости на Ruby on Rails.</h4>
-
-                <p >- Создание и настройка панелей администратора, юзера, верстка форм, создание функциональных пользовательских интерфейсов;</p>
-                <p >- Создание бизнес логики, в том числе: API эндпоинтов, экшенов, контроллеров, моделей, сервисов, триггеров, rake-задач;</p>
-                <p>- Использование RabbitMQ, Kafka и Karafka для обмена сообщениями между сервисами приложения;</p>
-                <p>- Настройка Sidekiq workers и db NoSQL Redis для обработки фоновых задач;</p>
-                <p>- Работа с миграциями, создание моделей, валидаций, сидов;</p>
-                <p>- Реализация пагинации через встроенный гем turbo-rails;</p>
-                <p>- Создание и модификация: helpers, partials and flashes;</p>
-                <p>- Модификация роутинга, работа с CRUD;</p>
-                <p>- Покрытие части логики rspec тестами;</p>
-                <p>- Настройка ассоциаций;</p>
-                <p>- Использование gitlab;</p>
-                <p>- Деплой на докере;</p>
-                <p>- Рефакторинг.</p>
-
-            <h2 class="mb-5">Bot Father Team</h2>
-            <h3 class="mt-5 mb-5">Сентябрь 2022 — Ноябрь 2022. 3 месяца.</h3>
-            <h4 class="mb-5">Создание telegram-ботов для бронирования номеров в отеле, сдачи в аренду авто, визиток.</h4>
-
-                <p>- Создание функционала и бизнес логики: структура, отправка сообщений, кнопки, геолокация, уведомления;</p>
-                <p>- Интеграции с сервисами OpenWeatherMap API, ЦБ РФ;</p>
-                <p>- Настройка авторизации через ОТП-коды;</p>
-                <p>- Разработка, методологией TDD, Rspec;</p>
-                <p>- Подключение PostgreSQL;</p>
-                <p>- Реализация платежей.</p>
-
-                <h2 class="mb-5">Education, courses:</h2>
-                <h3 class="mt-5 mb-5">2022г</h3>
-                <p class="mb-5">Ruby Rush. Разработчик на языке Ruby. https://rubyrush.ru</p>
-
-                <h2 class="mb-5">Hobbies:</h2>
-                <p class="mb-5">Теология, логика, актёрское мастерство, воркаут.</p>
-        </div>
+<body class="body">
+  <div class="a4-container">
+    <!-- Шапка, с таблицей и кнопками:
+    ======================================================================= -->
+    <div class="container">
+      <h1 class="left-column mb-0 center mt-0">Иван Гаевский</h1>
+      <img class="photo" src="profile_photo.jpg">
+      <h2 class="left-column mt-5 mb-5 center">Ruby on Rails разработчик</h2>
+      <p class="mt-0 mb-0 center">
+      		<a href="mailto:ivangaevskiy@mail.ru">Send email</a>,
+	        <a class="mb-5" href="https://t.me/Ivan_Ruby_Developer" target="_blank">Telegram</a>,
+	        <a href="https://github.com/IvanGaevskiy/inline_scrolling_without_JavaScript_DEMO"
+	        target="_blank">GitHub</a></p>
+      <div class="table-container">
+        <table class="mt-5 table-font-size">
+          <tbody>
+            <tr>
+              <td>— Ruby</td>
+              <td>— Git</td>
+              <td>— GitLab</td>
+            </tr>
+            <tr>
+              <td>— Docker</td>
+              <td>— SQL</td>
+              <td>— Kafka</td>
+            </tr>
+            <tr>
+              <td>— Ruby On Rails</td>
+              <td>— OOP, SOLID</td>
+              <td>— Bootstrap</td>
+            </tr>
+            <tr>
+              <td>— Sidekiq</td>
+              <td>— GitHub</td>
+              <td>— Karafka</td>
+            </tr>
+            <tr>
+              <td>— Linux</td>
+              <td>— PostgleSQL</td>
+              <td>— GraphOL</td>
+            </tr>
+            <tr>
+              <td>— Redis</td>
+              <td>— REST-API</td>
+              <td>— RabbitMQ</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-10 mb-10 center inversion-column">
+        <a class="button" href="pdf_rus.pdf"><strong>Скачать PDF</strong></a>
+      </p>
     </div>
+    <!-- Описание опыта работы, пройденные курсы, хобби:
+    ======================================================================= -->
+    <div class="mt-variable">
+      <div class="mb-variable">
+        <h2 class="mt-0 mb-5">Rails Real Estate Development</h2>
+        <h3 class="mt-5 mb-5">Ноябрь 2022 — Июнь 2024. 1 год 10 месяцев.</h3>
+        <h4 class="mb-5">Backend-разработка сайта по продаже недвижимости на Ruby on Rails.</h4>
+        <p>- Создание и настройка панелей администратора, юзера, верстка форм, создание функциональных пользовательских интерфейсов;</p>
+        <p>- Создание бизнес логики, в том числе: API эндпоинтов, экшенов, контроллеров, моделей, сервисов, триггеров, rake-задач;</p>
+        <p>- Использование RabbitMQ, Kafka и Karafka для обмена сообщениями между сервисами приложения;</p>
+        <p>- Настройка Sidekiq workers и db NoSQL Redis для обработки фоновых задач;</p>
+        <p>- Работа с миграциями, создание моделей, валидаций, сидов;</p>
+        <p>- Реализация пагинации через встроенный гем turbo-rails;</p>
+        <p>- Создание и модификация: helpers, partials and flashes;</p>
+        <p>- Модификация роутинга, работа с CRUD;</p>
+        <p>- Покрытие части логики rspec тестами;</p>
+        <p>- Настройка ассоциаций;</p>
+        <p>- Использование gitlab;</p>
+        <p>- Деплой на докере;</p>
+        <p>- Рефакторинг.</p>
+      </div>
+      <div class="mb-variable">
+        <h2 class="mb-5">Bot Father Team</h2>
+        <h3 class="mt-5 mb-5">Сентябрь 2022 — Ноябрь 2022. 3 месяца.</h3>
+        <h4 class="mb-5">Создание telegram-ботов для бронирования номеров в отеле, сдачи в аренду авто, визиток.</h4>
+        <p>- Создание функционала и бизнес логики: структура, отправка сообщений, кнопки, геолокация, уведомления;</p>
+        <p>- Интеграции с сервисами OpenWeatherMap API, ЦБ РФ;</p>
+        <p>- Настройка авторизации через ОТП-коды;</p>
+        <p>- Разработка, методологией TDD, Rspec;</p>
+        <p>- Подключение PostgreSQL;</p>
+        <p>- Реализация платежей.</p>
+      </div>
+      <div>
+        <h2 class="mb-5">Education, courses:</h2>
+        <h3 class="mt-5 mb-5">2022г</h3>
+        <p class="mb-5"><a href="https://rubyrush.ru" target="_blank"
+        	>Ruby Rush</a>. Разработчик на языке Ruby.</p>
+        <h2 class="mb-5">Location, hobbies:</h2>
+        <p class="mb-5">Батуми, Грузия. Религиоведение, логика, актёрское мастерство, воркаут.</p>
+      </div>
+    </div>
+  </div>
 </body>
-</html>
 
+</html>
