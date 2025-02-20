@@ -1,132 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<script src="/javaScript/script.js"></script>
 <head>
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript" >
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();
-    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-    ym(97944960, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-    });
-  </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/97944960" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ivan Gaevskiy. Resume.</title>
   <!-- Стили:
   ========================================================================= -->
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="profile_photo.jpg" type="image/x-icon">
+  <link rel="icon" href="img/profile_photo.jpg" type="image/x-icon">
 </head>
 
-<body class="body a4-container">
+<body class="body">
+  <div class="a4-container">
+    <div class="m-25">
 
-  <!-- Шапка, с таблицей и кнопками:
-  ======================================================================= -->
-  <header class="container">
-    <h1 class="left-column mb-0 center mt-0">Иван Гаевский</h1>
-    <img class="photo" src="profile_photo.jpg">
-    <h2 class="left-column mt-5 mb-5 center">Ruby on Rails разработчик</h2>
-    <nav class="mt-0 mb-0 center">
-        <a href="mailto:ivangaevskiy@mail.ru">Send email</a>,
-        <a class="mb-5" href="https://t.me/Ivan_Ruby_Developer" target="_blank">Telegram</a>,
-        <a href="https://github.com/IvanGaevskiy/inline_scrolling_without_JavaScript_DEMO"
-        target="_blank">GitHub</a>
-    </nav>
-    <acticle class="table-container">
-      <table class="mt-5 table-font-size">
-        <tbody>
-          <tr>
-            <td>— Ruby</td>
-            <td>— Git</td>
-            <td>— GitLab</td>
-          </tr>
-          <tr>
-            <td>— Docker</td>
-            <td>— SQL</td>
-            <td>— Kafka</td>
-          </tr>
-          <tr>
-            <td>— Ruby On Rails</td>
-            <td>— OOP, SOLID</td>
-            <td>— Bootstrap</td>
-          </tr>
-          <tr>
-            <td>— Sidekiq</td>
-            <td>— GitHub</td>
-            <td>— Karafka</td>
-          </tr>
-          <tr>
-            <td>— Linux</td>
-            <td>— PostgreSQL</td>
-            <td>— GraphQL</td>
-          </tr>
-          <tr>
-            <td>— Redis</td>
-            <td>— REST-API</td>
-            <td>— RabbitMQ</td>
-          </tr>
-        </tbody>
-      </table>
-    </acticle>
-    <nav class="mt-10 mb-10 center inversion-column">
-      <a class="button" href="pdf_rus.pdf"><strong>Скачать PDF</strong></a>
-    </nav>
-  </header>
+      <!-- Шапка, с таблицей и кнопками:
+      ======================================================================= -->
+      <header class="display-flex flex-jc-start gap-12">
+        <img class="photo" src="img/profile_photo.jpg">
+        <div class="display-flex flex-dir-column">
+          <h1 class="center mt-0 mb-5">Иван Гаевский</h1>
+          <h2 class="center mt-0 mb-5">Ruby on Rails backend</h2>
+          <article class="table-container">
+            <table class="mt-5 table-font-size">
+              <tbody>
+                <tr>
+                  <td>— Ruby</td>
+                  <td>— Git</td>
+                  <td>— GitLab</td>
+                </tr>
+                <tr>
+                  <td>— Docker</td>
+                  <td>— SQL</td>
+                  <td>— Kafka</td>
+                </tr>
+                <tr>
+                  <td>— Ruby On Rails</td>
+                  <td>— OOP, SOLID</td>
+                  <td>— Bootstrap</td>
+                </tr>
+                <tr>
+                  <td>— Sidekiq</td>
+                  <td>— GitHub</td>
+                  <td>— Karafka</td>
+                </tr>
+                <tr>
+                  <td>— Linux</td>
+                  <td>— PostgreSQL</td>
+                  <td>— GraphQL</td>
+                </tr>
+                <tr>
+                  <td>— Redis</td>
+                  <td>— REST-API</td>
+                  <td>— RabbitMQ</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <nav class="mt-10 mb-10 center inversion-column">
+          </nav>
 
-  <!-- Описание опыта работы, пройденные курсы, хобби:
-  ======================================================================= -->
-  <main class="mt-variable">
-    <article class="mb-variable">
-      <h2 class="mt-0 mb-5">Rails Real Estate Development</h2>
-      <h3 class="mt-5 mb-5">Ноябрь 2022 — Июнь 2024. 1 год 10 месяцев.</h3>
-      <h4 class="mb-5">Разработка сайта по продаже недвижимости на Ruby on Rails.</h4>
-      <p>- Создание и настройка панелей администратора, юзера, верстка форм, создание функциональных пользовательских интерфейсов;</p>
-      <p>- Создание бизнес логики, в том числе: API эндпоинтов, экшенов, контроллеров, моделей, сервисов, триггеров, rake-задач;</p>
-      <p>- Использование RabbitMQ, Kafka и Karafka для обмена сообщениями между сервисами приложения;</p>
-      <p>- Реализация онлайн чата с возможностью добавления файлов через active storage;</p>
-      <p>- Настройка Sidekiq workers и db NoSQL Redis для обработки фоновых задач;</p>
-      <p>- Реализация авторизации и регистрации без пароля через телеграм-бота;</p>
-      <p>- Работа с миграциями, создание моделей, валидаций, сидов;</p>
-      <p>- Реализация пагинации через встроенный гем turbo-rails;</p>
-      <p>- Создание и модификация: helpers, partials and flashes;</p>
-      <p>- Модификация роутинга, работа с CRUD;</p>
-      <p>- Покрытие части логики rspec тестами;</p>
-    </article>
-    <article class="mb-variable">
-      <h2 class="mb-5">Bot Father Team</h2>
-      <h3 class="mt-5 mb-5">Сентябрь 2022 — Ноябрь 2022. 3 месяца.</h3>
-      <h4 class="mb-5">Создание telegram-ботов для бронирования номеров в отеле, сдачи в аренду авто, визиток.</h4>
-      <p>- Создание функционала и бизнес логики: структура, отправка сообщений, кнопки, геолокация, уведомления;</p>
-      <p>- Интеграции с сервисами OpenWeatherMap API, ЦБ РФ;</p>
-      <p>- Настройка авторизации через ОТП-коды;</p>
-      <p>- Разработка, методологией TDD, Rspec;</p>
-      <p>- Подключение PostgreSQL;</p>
-      <p>- Реализация платежей.</p>
-    </article>
-    <article>
-      <h2 class="mb-5">Education, courses:</h2>
-      <h3 class="mt-5 mb-5">2022г</h3>
-      <nav class="mb-5">
-        <a href="https://rubyrush.ru" target="_blank"
-        >Ruby Rush</a>. Разработчик на языке Ruby.
-      </nav>
-    </article>
-    <article>
-      <h2 class="mb-5">Location, hobbies:</h2>
-      <p class="mb-5">Батуми, Грузия. Религиоведение, логика, актёрское мастерство, воркаут.</p>
-    </article>
-  </main>
+        </div>
+        <nav class="center ml-a display-flex gap-12">
+          <a class="for-svg" href="mailto:ivangaevskiy@mail.ru">
+            <svg class='for-svg'>
+              <use xlink:href="/img/sprite.svg?v=9#email-svg"></use>
+            </svg>
+          </a>
+          <a class="for-svg" href="https://t.me/Ivan_Ruby_Developer" target="_blank">
+            <svg width="24px" height="24px" class='for-svg'>
+              <use xlink:href="/img/sprite.svg?v=10#telegram-svg"></use>
+            </svg>
+          </a>
+          <a class="for-svg" href="https://github.com/IvanGaevskiy/inline_scrolling_without_JavaScript_DEMO" target="_blank">
+            <svg class='for-svg'>
+              <use xlink:href="/img/sprite.svg?v=11#github-svg"></use>
+            </svg>
+          </a>
+          <a class="for-svg" href="pdf_rus.pdf" target="_blank">
+            <svg class='for-svg'>
+              <use xlink:href="/img/sprite.svg?v=18#pdf-svg"></use>
+            </svg>
+          </a>
+          <div class="ml-24 for-svg cursor-pointer lamp--js">
+            <svg class='for-svg'>
+              <use xlink:href="/img/sprite.svg?v=14#lamp-svg"></use>
+            </svg>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Описание опыта работы, пройденные курсы, хобби:
+      ======================================================================= -->
+      <main class="mt-variable">
+        <article class="mb-variable max-w-740">
+          <h2 class="mt-0 mb-5">Salebot Pro</h2>
+          <h3 class="mt-5 mb-5">Февраль 2023 — Февраль 2025. 2 года 1 мес.</h3>
+          <h4 class="mb-5">Разработка систем автоматизации бизнеса: CRM, чат-боты, канбан, конструктор сайтов</h4>
+          <p class="">- Добавление массовых переносов сделок по стейтам в CRM. Вынесение части запросов в фоновые задачи
+            через Active job (использовался в проекте), а так же использование sidekiq под фоновые задачи (для себя);
+          </p>
+          <p class="">- Создание бизнес логики в том числе: API эндпоинтов, экшенов, контроллеров, моделей, сервисов,
+            триггеров, rake-задач, а так же сопутствующие миграции, модели, валидации, сиды, модицикация роутинга и
+            работа с CRUD;</p>
+          <p class="">- Отладка и устранение багов как на серверной стороне (Rails), так и на клиенте (JavaScript),
+            работа с большими объёмами кода;</p>
+          <p class="">- Написание онлайн чата через ActionCable с возможностью добавления файлов через ActiveStorage;
+          </p>
+          <p class="">- Реализация авторизации и регистрации без пароля через телеграм-бота;</p>
+          <p class="">- Применение RabbitMQ, Kafka для обмена сообщениями между сервисами приложения;</p>
+          <p class="">- Создание и настройка панели администратора, юзера, реализация функциональных пользовательских
+            интерфейсов;</p>
+          <p class="">- Добавление функционала массового удаления по категориям файлов из хранилища;</p>
+          <p class="">- Использование db NoSQL Redis для хранения сессий и очередей задач;</p>
+          <p class="">- Добавление пагинации в CRM с несколькими видами сортировок;</p>
+          <p class="">- Использование библиотеки rspec и написание тестов;</p>
+          <p class="">- Активное применение инструментов devTools (в т.ч дебаггера);</p>
+          <p class="">- Создание и модификация: helpers, partials and flashes;</p>
+          <p class="">- Реализация бэкэнда фильтров списка клиентов.</p>
+
+        </article>
+        <article>
+          <h2 class="mb-5">Education, courses:</h2>
+          <h3 class="mt-5 mb-5">2022г</h3>
+          <nav class="mb-5">
+            <a href="https://rubyrush.ru" target="_blank">Ruby Rush</a>. Разработчик на языке Ruby.
+          </nav>
+        </article>
+        <article>
+          <h2 class="mb-5">Location, hobbies:</h2>
+          <p class="mb-5">Батуми, Грузия. Религиоведение, логика, актёрское мастерство, воркаут.</p>
+        </article>
+      </main>
+    </div>
+  </div>
 </body>
-</html>
 
+</html>
