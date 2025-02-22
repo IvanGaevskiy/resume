@@ -1,113 +1,253 @@
-/*Публичные стили.
+/* Публичные стили
 ============================================================================ */
+
+/* Переменные для цветов и прозрачности */
 :root {
-  --color-text: #e0e0e0;
-  --color-svg: black;
-  --color-svg-hover: white;
-  --color-body: linear-gradient(80deg, #000000, #5984c3);
-  --color-content: linear-gradient(90deg, #171e24, #2c3844, #9c9c9c);
+  --color-text: #bfbfbf;
+  --color-text-invert: #353535;
+  --color-svg: white;
+  --color-svg-hover: black;
+  --color-lamp: #7daaed;
+  --color-lamp-hover: #c39c59;
   --color-link: white;
   --opacity-img: 0.8;
-}
 
+  --color-body-night: linear-gradient(80deg, #000000, #5984c3);
+  --color-body-day: linear-gradient(80deg, #ffecb9, #c39c59);
+  --color-a4-container-night: linear-gradient(270deg, #383838, #1a1a1a, #0d0d0d);
+  --color-a4-container-day: linear-gradient(270deg, #b0b0b0, #d5d5d5, #f3f3f3);
+}
+/* Включить лампу(изменить тему на светлую) */
 .lamp--on {
-  --color-text: black;
-  --color-svg: white;
-  --color-svg-hover: blue;
-  --color-body: white;
-  --color-content: white;
-  --opacity-img: 1;
+  --color-text: #353535;
+  --color-text-invert: #bfbfbf;
+  --color-svg: rgb(0, 0, 0);
+  --color-svg-hover: white;
+  --color-lamp: #785518;
+  --color-lamp-hover: #7daaed;
+  --color-link: black;
+  --opacity-img: 0.9;
 }
 
-/*Body.*/
+/* Body */
 .body {
   font-family: Arial, sans-serif;
-  background: var(--color-body);
-  color:var(--color-text);
+  color: var(--color-text);
 }
 
-/*Контейнер для всей страницы. Формат А4.*/
+html,
+body {
+  margin: 0;
+  position: relative;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  padding: 20px 0 20px 0;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+  transition: opacity 2s ease;
+}
+body::before {
+  background: linear-gradient(80deg, #000000, #5984c3);
+  opacity: 1;
+}
+
+body::after {
+  background: linear-gradient(80deg, #ffecb9, #c39c59);
+  opacity: 0;
+}
+
+body.lamp--on::before {
+  opacity: 0;
+}
+
+body.lamp--on::after {
+  opacity: 1;
+}
+
+/* Контейнер листа */
 .a4-container {
+  position: relative;
   max-width: 100%;
   width: 1280px;
   margin: 0 auto;
   box-sizing: border-box;
   padding: 25px;
-  background: var(--color-content);
+  background: transparent;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
 
-/*Контейнер для шапки с двумя колонками.*/
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
+/* Общие стили для обоих псевдоэлементов */
+.a4-container::before,
+.a4-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  z-index: -1;
+  transition: opacity 1s ease;
 }
 
-.left-column { grid-column: 1; }
-.right-column { grid-column: 2; }
+.a4-container::before {
+  background: var(--color-a4-container-night);
+  opacity: 1;
+}
 
-.inversion-column { grid-column: 1; }
+.a4-container::after {
+  background: var(--color-a4-container-day);
+  opacity: 0;
+}
 
-/*Отступы.*/
-.mr-10 { margin-right: 10px; }
-.mr-5 { margin-right: 5px; }
-.mr-0 { margin-right: 0px; }
+body.lamp--on .a4-container::before {
+  opacity: 0;
+}
 
-.mb-10 { margin-bottom: 10px; }
-.mb-5 { margin-bottom: 5px; }
-.mb-0 { margin-bottom: 0px; }
+body.lamp--on .a4-container::after {
+  opacity: 1;
+}
 
-.mt-10 {margin-top: 10px; }
-.mt-5 {margin-top: 5px; }
-.mt-0 {margin-top: 0px; }
+/* Отступы, расположение элементов */
+.mr-10 {
+  margin-right: 10px;
+}
 
-.m-25 {margin: 25px}
+.mr-5 {
+  margin-right: 5px;
+}
 
-.mx-a {margin-left: auto; margin-right: auto;}
-.ml-a {margin-left:auto}
-.ml-24 {margin-left: 24px;}
+.mr-0 {
+  margin-right: 0px;
+}
 
-.mb-variable { margin-bottom: 60px; }
-.mt-variable {margin-top: 60px; }
+.mb-10 {
+  margin-bottom: 10px;
+}
 
-.center {text-align: center; }
+.mb-5 {
+  margin-bottom: 5px;
+}
 
-.w-100 {width: 100%;}
-.w-90 {width: 90%;}
+.mb-0 {
+  margin-bottom: 0px;
+}
 
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-5 {
+  margin-top: 5px;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.m-25 {
+  margin: 25px
+}
+
+.mx-a {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ml-a {
+  margin-left: auto
+}
+
+.ml-24 {
+  margin-left: 24px;
+}
+
+.ml-36 {
+  margin-left: 36px;
+}
+
+.mb-variable {
+  margin-bottom: 60px;
+}
+
+.mt-variable {
+  margin-top: 60px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.max-w-740 {
+  max-width: 740px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Flex */
+.display-flex {
+  display: flex;
+}
+
+.flex-jc-start {
+  justify-content: flex-start !important;
+}
+
+.flex-dir-column {
+  flex-direction: column !important;
+}
+
+.gap-12 {
+  gap: 12px;
+}
+
+/* Для svg */
 .for-svg {
-  width: 24px;
-  height: 24px;
   color: var(--color-svg) !important;
+  transition: color 1s ease;
 }
+
 .for-svg:hover {
   color: var(--color-svg-hover) !important;
+  transition: color 1s ease;
 }
 
-.cursor-pointer {cursor: pointer;}
+/* Для лампы */
+.for-lamp {
+  width: 24px;
+  height: 24px;
+  color: var(--color-lamp);
+  transition: color 1s ease;
+}
 
-/*Flex*/
-.display-flex { display: flex; }
-.flex-jc-start { justify-content: flex-start !important; }
-.flex-jc-center { justify-content: center !important; }
-.flex-jc-end { justify-content: flex-end !important; }
-.flex-jc-space-between { justify-content: space-between !important; }
-.flex-ai-start { align-items: flex-start !important; }
-.flex-ai-center { align-items: center !important; }
-.flex-ai-end { align-items: flex-end !important; }
-.flex-ai-baseline { align-items: baseline !important; }
-.flex-wrap { flex-wrap: wrap !important; }
-.flex-nowrap { flex-wrap: nowrap !important; }
-.flex-dir-column { flex-direction: column !important; }
-.flex-dir-row { flex-direction: row !important; }
-.flex-grow { flex-grow: 1; }
-.flex-shrink { flex-shrink: 1; }
-.gap-12 {gap: 12px;}
+.for-lamp:hover {
+  color: var(--color-lamp-hover);
+  transition: color 1s ease;
+}
 
-/*Фото.*/
-.max-w-740 {max-width: 740px;}
-/*Фото.*/
+/* Фото */
 .photo {
   justify-self: center;
   object-fit: cover;
@@ -116,121 +256,88 @@
   opacity: var(--opacity-img);
 }
 
-/*Кнопка.*/
-.button {
-  padding: 14px 30px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #afe0f0;
-  color: rgb(41, 41, 41);
-  border: 0;
-  border-radius: 5px;
-  border-color: black;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.button:hover {
-  background-color: #95cfe2;
-  color: #000000;
-}
-
-/*Ссылка.*/
-a {
+/* Для ссылок */
+.for-link {
+  height: 24px;
   text-decoration: none;
   color: var(--color-text);
   font-weight: bold;
   cursor: pointer;
+  transition: color 2s ease;
 }
 
-a:hover,
-a:active {
+.for-link:hover,
+.for-link:active {
   text-decoration: none;
   color: var(--color-link);
 }
 
-/*Таблицы.*/
-.table-container {
-  display: grid;
-  place-items: center;
+/* Стек */
+.for-stack {
+  display: flex;
+  gap: 8px;
+  margin-left: 24px;
+  margin-top: 12px;
+  padding: 12px;
+  flex-wrap: wrap;
+  width: 500px;
+}
+.for-stack > * {
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 8px;
+}
+.for-stack > *:hover {
+  color: var(--color-svg);
+  border-radius: 10px;
 }
 
-/*Размер шрифта.*/
-.table-font-size { font-size: 18px; }
-
-/*Выравнивание по левому краю текста в столбцах,
-  и отступы между столбцами.*/
-th,
-td {
-  text-align: left;
-  padding-bottom: 0px;
-  padding-left: 18px;
-  padding-right: 18px;
+/* Тосты */
+.toast-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
 }
 
-/*Фиксы для разных разрешений экрана.
-============================================================================ */
-
-/*До 360px ширина.*/
-/* @media (max-width: 360px) {
-	.table-font-size { font-size: 12px; }
-
-  .button {
-    padding: 10px 15px;
-    font-size: 12px;
-  }
-
-  th,
-  td {
-    padding-bottom: 1px;
-    padding-left: 4px;
-    padding-right: 4px;
-  }
+.toast {
+  background-color: var(--color-text);
+  color: var(--color-text-invert);
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s, transform 0.5s;
 }
 
-/*Диапазон 361px - 767px ширино.*/
-/* @media (min-width: 361px) and (max-width: 767px) {
-  th,
-  td {
-    padding-bottom: 1px;
-    padding-left: 2px;
-    padding-right: 2px;
-  }
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/*Только для 768px ширина.*/
-/* @media (width: 768px) {
-  .button {
-    padding: 10px 15px;
-    font-size: 12px;
-  }
+/* Полезные классы */
+.user-select-none {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
-  th,
-  td {
-    padding-bottom: 0px;
-    padding-left: 14px;
-    padding-right: 14px;
-  }
+.cursor-pointer {
+  cursor: pointer;
+}
 
-  .photo {
-    grid-column: 2;
-    grid-row: span 3;
-    width: 60%;
-    height: auto;
-  }
-} */
+.svg-24 {
+  width: 24px;
+  height: 24px;
+}
 
-/*От 768px.*/
-/* @media (min-width: 768px) {
-  .container { grid-template-columns: 1.5fr 1fr; }
-  .inversion-column { grid-column: 2; }
-  .table-font-size { font-size: 16px; }
-  .mt-variable { margin-top: 40px; }
-
-  .photo {
-    grid-column: 2;
-    grid-row: span 4;
-    width: 100%;
-    height: auto;
-  }
-} */
+.svg-18 {
+  width: 18px;
+  height: 18px;
+}

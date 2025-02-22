@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <script src="/javaScript/script.js"></script>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,11 @@
   <!-- Стили:
   ========================================================================= -->
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="img/profile_photo.jpg" type="image/x-icon">
+  <!-- <link rel="icon" href="img/profile_photo.jpg" type="image/x-icon"> -->
 </head>
 
-<body class="body">
+<body class="body user-select-none">
+  <div class="toast-container toast-container--js"></div>
   <div class="a4-container">
     <div class="m-25">
 
@@ -20,72 +22,64 @@
       <header class="display-flex flex-jc-start gap-12">
         <img class="photo" src="img/profile_photo.jpg">
         <div class="display-flex flex-dir-column">
-          <h1 class="center mt-0 mb-5">Иван Гаевский</h1>
-          <h2 class="center mt-0 mb-5">Ruby on Rails backend</h2>
-          <article class="table-container">
-            <table class="mt-5 table-font-size">
-              <tbody>
-                <tr>
-                  <td>— Ruby</td>
-                  <td>— Git</td>
-                  <td>— GitLab</td>
-                </tr>
-                <tr>
-                  <td>— Docker</td>
-                  <td>— SQL</td>
-                  <td>— Kafka</td>
-                </tr>
-                <tr>
-                  <td>— Ruby On Rails</td>
-                  <td>— OOP, SOLID</td>
-                  <td>— Bootstrap</td>
-                </tr>
-                <tr>
-                  <td>— Sidekiq</td>
-                  <td>— GitHub</td>
-                  <td>— Karafka</td>
-                </tr>
-                <tr>
-                  <td>— Linux</td>
-                  <td>— PostgreSQL</td>
-                  <td>— GraphQL</td>
-                </tr>
-                <tr>
-                  <td>— Redis</td>
-                  <td>— REST-API</td>
-                  <td>— RabbitMQ</td>
-                </tr>
-              </tbody>
-            </table>
+          <h1 class="ml-36 mt-0 mb-5">Иван Гаевский</h1>
+          <h2 class="ml-36 mt-0 mb-5">Ruby on Rails backend</h2>
+          <article class="for-stack mx-a">
+            <div>Ruby</div>
+            <div>Ruby on Rails</div>
+            <div>JavaScript</div>
+            <div>SQL</div>
+            <div>PosgreSQL</div>
+            <div>Sqlite3</div>
+            <div>Redis</div>
+            <div>Git</div>
+            <div>Github</div>
+            <div>Gitlub</div>
+            <div>Bitbucket</div>
+            <div>GraphQL</div>
+            <div>ActiveJob</div>
+            <div>Sidekiq</div>
+            <div>Kafka</div>
+            <div>RabbitMQ</div>
+            <div>Docker</div>
+            <div>Linux</div>
+            <div>CI/CD</div>
+            <div>SOLID</div>
+            <!-- <svg class="svg-18 cursor-pointer copy-stack--js">
+              <use xlink:href="/img/sprite.svg?v=99#copy-svg"></use>
+            </svg> -->
           </article>
           <nav class="mt-10 mb-10 center inversion-column">
           </nav>
 
         </div>
         <nav class="center ml-a display-flex gap-12">
-          <a class="for-svg" href="mailto:ivangaevskiy@mail.ru">
-            <svg class='for-svg'>
+          <div class="for-link copy-email--js">ivangaevskiy@mail.ru
+          </div>
+          <a class="for-svg svg-24" href="mailto:ivangaevskiy@mail.ru">
+            <svg class='for-svg svg-24'>
               <use xlink:href="/img/sprite.svg?v=9#email-svg"></use>
             </svg>
           </a>
-          <a class="for-svg" href="https://t.me/Ivan_Ruby_Developer" target="_blank">
-            <svg width="24px" height="24px" class='for-svg'>
+          <a class="for-svg svg-24" href="https://t.me/Ivan_Ruby_Developer" target="_blank">
+            <svg width="24px" height="24px" class='for-svg svg-24'>
               <use xlink:href="/img/sprite.svg?v=10#telegram-svg"></use>
             </svg>
           </a>
-          <a class="for-svg" href="https://github.com/IvanGaevskiy/inline_scrolling_without_JavaScript_DEMO" target="_blank">
-            <svg class='for-svg'>
+          <a class="for-svg svg-24" href="https://github.com/IvanGaevskiy"
+            target="_blank">
+            <svg class='for-svg svg-24'>
               <use xlink:href="/img/sprite.svg?v=11#github-svg"></use>
             </svg>
           </a>
-          <a class="for-svg" href="pdf_rus.pdf" target="_blank">
-            <svg class='for-svg'>
+          <a class="for-svg svg-24" href="pdf_rus2.pdf" target="_blank">
+            <svg class='for-svg svg-24'>
               <use xlink:href="/img/sprite.svg?v=18#pdf-svg"></use>
             </svg>
           </a>
-          <div class="ml-24 for-svg cursor-pointer lamp--js">
-            <svg class='for-svg'>
-              <use xlink:href="/img/sprite.svg?v=14#lamp-svg"></use>
+          <div class="ml-24 for-lamp lamp--js cursor-pointer ">
+            <svg class='for-lamp'>
+              <use xlink:href="/img/sprite.svg?v=40#lamp-svg"></use>
             </svg>
           </div>
         </nav>
@@ -98,6 +92,7 @@
           <h2 class="mt-0 mb-5">Salebot Pro</h2>
           <h3 class="mt-5 mb-5">Февраль 2023 — Февраль 2025. 2 года 1 мес.</h3>
           <h4 class="mb-5">Разработка систем автоматизации бизнеса: CRM, чат-боты, канбан, конструктор сайтов</h4>
+
           <p class="">- Добавление массовых переносов сделок по стейтам в CRM. Вынесение части запросов в фоновые задачи
             через Active job (использовался в проекте), а так же использование sidekiq под фоновые задачи (для себя);
           </p>
@@ -122,10 +117,14 @@
 
         </article>
         <article>
-          <h2 class="mb-5">Education, courses:</h2>
+          <h2 class="mb-5">Courses:</h2>
           <h3 class="mt-5 mb-5">2022г</h3>
+          <nav class="mb-10">
+            <a class='for-link' href="https://rubyrush.ru" target="_blank">Ruby Rush</a>. Разработчик на языке Ruby.
+          </nav>
+          <h3 class="mt-5 mb-5">2024г</h3>
           <nav class="mb-5">
-            <a href="https://rubyrush.ru" target="_blank">Ruby Rush</a>. Разработчик на языке Ruby.
+            <div>Полный курс по JavaScript. Илья Петриченко</div>
           </nav>
         </article>
         <article>
